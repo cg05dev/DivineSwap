@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 text-zinc-100 antialiased overflow-x-hidden;
+  }
+}
+
+.zeus-gradient {
+  @apply bg-gradient-to-b from-[#0A0F1E] via-[#141B2D] to-[#0A0F1E];
+}
+
+.minimal-card {
+  @apply bg-[#0A0F1E]/50 backdrop-blur-md border border-blue-900/20 rounded-xl;
+}
+
+/* Rain Effect */
+.rain-drop {
+  @apply absolute w-[2px] h-[25px] bg-blue-400/30;
+  animation: rain linear forwards;
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+/* Ticker Animation */
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-wrapper {
+  display: flex;
+  animation: ticker 15s linear infinite; /* Reduced from 20s to 15s for even faster movement */
+  width: max-content;
+}
+
+.ticker-content {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem; /* Reduced from 1rem to 0.5rem */
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
