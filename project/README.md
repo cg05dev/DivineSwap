@@ -1,4 +1,4 @@
-# Zeus DEX Frontend
+# DivineSwap Frontend
 
 A decentralized exchange (DEX) built on Solana with a modern, user-friendly interface.
 
